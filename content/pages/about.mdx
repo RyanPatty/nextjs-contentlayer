@@ -1,22 +1,52 @@
 ---
 title: About
-description: About the site
+description: This a blog post detailing the Fall 2023 capstone project
+date: "2023-11-30"
 ---
 
-Blandit libero volutpat sed cras ornare arcu. Cursus sit amet dictum sit amet. Nunc vel risus commodo viverra maecenas accumsan. Libero id faucibus nisl tincidunt eget nullam non nisi est. Varius quam quisque id diam vel quam. Id donec ultrices tincidunt arcu non.
+## Description:
 
-## Consent
+Our capstone project was to automate the incredibly monotonous task of reviewing test footage of a spectrum analyzer which previously required an operator to manually review the footage and record all relevant data by hand. These videos could be up to 8 hours in length which represents a large expenditure of human resources to carry out. So it follows that our goal was to dramatically reduce the time it takes to produce this data while requiring little input from operators.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu. Nibh ipsum consequat nisl vel pretium lectus quam id leo. A arcu cursus vitae congue. Amet justo donec enim diam. Vel pharetra vel turpis nunc eget lorem. Gravida quis blandit turpis cursus in. Semper auctor neque vitae tempus. Elementum facilisis leo vel fringilla est ullamcorper eget nulla. Imperdiet nulla malesuada pellentesque elit eget.
+## Problems to solve
 
-Felis donec et odio pellentesque diam volutpat commodo sed.
+The task of automating the analysis can be broken down into four main tasks:
 
-Tortor consequat id porta nibh. Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Scelerisque fermentum dui faucibus in. Tortor posuere ac ut consequat semper viverra.
+- Grid detection: finding the bounds of the grid any where inside of the frame
+- Signal detection: isolating the signal displayed on the grid in each frame to determine center frequency and power of signal peaks
+- Detection of current spectrum analyzer settings: Spectrum analyzers have many settings which define the extrema of the detected grid in real units allowing us to turn relative positional measurements into real readings
+- Data storage: write all the collected data to a CSV for further analysis
 
-## Information we collect
+## Key Technologies Utilized:
 
-Amet justo donec enim diam. In hendrerit gravida rutrum quisque non. Hac habitasse platea dictumst quisque sagittis purus sit.
+- Python: choosing python as the language to implement our project was relatively easy given the large amount of libraries in the python ecosystem
+- CV2: A computer vision library utilized heavily in the detection of grids and signal detection
+- EasyOCR: an optical character recognition library utilized in the detection of spectrum analyzer settings
+- PyQT5: a UI library that allowed us to create an intuitive graphical user interface
 
-## How we use your Information
+## Results
 
-Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Consectetur adipiscing elit pellentesque habitant. Ut tristique et egestas quis ipsum suspendisse ultrices gravida.
+- All requirements were fulfilled over the course of the semester including an additional GUI to improve user experience
+- Accurate data was produced in all test footage provided by the sponsor
+- Processing times were reduced by up to 80% when compared to previous manual review.
+
+## Team members
+
+Ryan O'Connor: Developer
+email: roconno8@students.kennesaw.edu
+[LinkedIn](https://www.linkedin.com/in/ryan-o-connor-485265180/)
+
+Nathan Reed: Developer
+email: nreed18@students.kennesaw.edu
+[LinkedIn](https://www.linkedin.com/in/nathan-reed-31a199223/)
+
+Ayorinde Lawani: Developer
+email: alawani@students.kennesaw.edu
+
+Dinesh Sekar: Testing
+email: dsekar@students.kennesaw.edu
+
+
+
+Richard Luthringshauser: Developer
+email: rluthrin@students.kennesaw.edu
